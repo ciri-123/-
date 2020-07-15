@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			padding: 25px;
+			background:rgba(252,216,217,1.00);
+		}
+		.header{
+			padding: 30px;
+			text-align: center;
+			background: rgba(254,252,252,1.00);
+			background-image:url(img/背景图.png);
+			background-size:cover;
+			height: 615px;
+		}
+		.biaoti{
+			position:relative;
+	        animation:mymove 5s infinite;
+	        -webkit-animation:mymove 5s infinite;
+		}
+		@keyframes mymove
+         {
+	        from {right:70px;}
+	        to {right:350px;}
+         }
+		.topnav{
+			overflow: hidden;
+			background-color: rgba(168,202,253,1.00);
+		}
+		.topnav a {
+			float: left;
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			padding: 20px 25px;
+			color:rgba(249,217,1,1.00);
+			font-size: 25px;
+		}
+		.topnav a:hover {
+			background-color:rgba(253,213,159,1.00);
+			color:rgba(53,166,253,1.00);
+			font-weight: bold;
+			font-size: 28px;
+		}
+		.leftcolumn{
+			float: left;
+			width:75%;
+		}
+		.rightcolumn{
+			float: left;
+			width:25%;
+			background-color:rgba(252,216,217,1.00);
+			padding-left: 20px;
+		}
+		.fakeimg{
+			background-color: antiquewhite;
+			width:100%;
+			padding: 20px;
+		}
+		.pic {
+			 margin: 10px 10px;
+             border: 1px solid #ccc;
+             float: left;
+             width: 180px;
+		}
+		.pic:hover{
+			 border: 2px solid rgba(255,167,190,1.00);
+			
+		}
+		.pic img {
+			 width: 100%;
+             height: 150px;
+		}
+		.desc {
+			padding: 15px;
+            text-align: center;
+		}
+		.card{
+			background-color: white;
+			padding: 20px;
+			margin-top: 20px;
+		}
+		.row:after {
+			content:"";
+			display: table;
+			clear: both;
+		}
+		.biaodan{
+			text-align: center;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.chuntian{
+			right: 1000px;
+			top:1150px;
+			width:170px;
+			height: 190px;
+			display: none;
+			position: absolute;
+		}
+		.cai{
+			right: 300px;
+			top:1350px;
+			width:670px;
+			height: 790px;
+			display: none;
+			position: absolute;
+		}
+		.yue{
+			right: 500px;
+			top:1150px;
+			width:670px;
+			height: 790px;
+			display: none;
+			position: absolute;
+		}
+		button{
+			display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 10px;
+            border: 1px solid transparent;
+			font-size: 20px;
+		}
+		input[type=text]:focus{
+			background-color:rgba(185,235,255,1.00);
+		}
+		.footer{
+			padding: 20px;
+			text-align: center;
+			background: rgba(202,225,249,1.00);
+			margin-top: 20px;
+		}
+		@media screen and(max-width:800px){
+			.leftcolumn,.rightcolumn{
+				width:100%;
+				padding:0;
+			}
+		}
+		@media screen and(max-width:400px){
+			.topnav a{
+				float: none;
+				width: 100%;
+			}
+		}
+	</style>
+	<script>
+		
+		
+	
+	function huanYin(){
+		alert("欢迎来到猫小咖的页面啊!");
+	}
+	function jieShao(){
+		alert("这是的猫小咖的个人页面，里面记录着小咖的爱好，希望能遇到同样喜欢这些东西的你们！");
+	}
+	function haiYou(){
+		alert("如果你们喜欢这个页面请给我like吧，还有留言区可以说话噢~");
+	}
+	function tijiao(){
+		alert("你的信息和留言小咖已经收到了~~~");
+	}	
+	
+		
+
+		
+		window.onload = setInterval(step, 1500);
+       var num = 10;
+       function step() {
+       if (num < 12) {
+       num++;
+       } else {
+       num = 10;
+       }
+       var dom = document.getElementById("imgId");
+       dom.src = 'img/' + num + '.jpg';
+       }
+		
+		
+		
+    </script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="biaoti">
+		<img src="img/网页标题.png" style="float: right;position:absolute;height: 180px;width: 500px;">
+		</div>
+		
+		<button onclick="huanYin()" style="position: absolute; top:350px;right: 900px;height: 40px;width:140px;background-color: rgba(152,209,252,1.00);" onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor='powderblue'">快来点我吧</button>
+		<button onclick="jieShao()" style="position: absolute; top:350px;right: 700px;height: 40px;width:140px;background-color: rgba(152,209,252,1.00);" onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor='powderblue'">关于猫小咖</button>
+		<button onclick="haiYou()" style="position: absolute; top:350px;right: 500px;height: 40px;width:140px;background-color: rgba(152,209,252,1.00);" onmouseover="this.style.backgroundColor='pink'" onmouseout="this.style.backgroundColor='powderblue'">小咖还想说</button>
+	
+		<audio controls style="position:absolute;left: 35px;top:610px;width: 100px;"><source src="img/背景音乐.mp3" type="audio/mpeg"></audio>
+		
+		<img src="img/2.gif" style="float: right;position:absolute;;top:479px;right: 240px;" id="tuzi">
+	</div>
+	
+	
+	<div class="topnav">
+		<a href="#part1">旅游手记</a>
+		<a href="#part2">电影手记</a>
+		<a href="#part3">喜欢的人</a>
+		<a href="#part4">读书手记</a>
+		<a href="#part5" style="float: right">给小咖的留言</a>
+	</div>
+	
+	
+	<div class="row">
+		
+		<a name="part1">
+		<div class="leftcolumn">
+			<div class="card">
+				
+				<img src="img/玩球的小猫.gif" style="float: right;position:absolute;;top:750px;right: 550px;width: 250px;height: 200px;">
+				
+			<h2><p style="color: rgba(83,192,253,1.00);">旅行手记</p>放假的时候就喜欢出门走走~</h2>
+			<p>记录一下自己喜欢的地方，西雅图，镰仓，清迈，厦门，重庆~~~</p>
+				<p>还有更多的地方需要不断探索~~~</p>
+				<div class="fakeimg" style="height: 300px;">
+					<div class="pic">
+						<a href="https://you.ctrip.com/place/seattle253.html" target="_blank">
+						<img src="img/西雅图.jpg">
+						</a>
+						<div class="desc">西雅图</div>
+					</div>
+					<div class="pic">
+						<a href="https://you.ctrip.com/place/kamakura56705.html" target="_blank">
+						<img src="img/镰仓.jpg">
+						</a>
+						<div class="desc">镰仓</div>
+					</div>
+					<div class="pic">
+						<a href="https://you.ctrip.com/place/chiangmai209.html" target="_blank">
+						<img src="img/清迈.jpg">
+						</a>
+						<div class="desc">清迈</div>
+					</div>
+					<div class="pic">
+						<a href="https://you.ctrip.com/place/xiamen21.html" target="_blank">
+						<img src="img/厦门.jpg">
+						</a>
+						<div class="desc">厦门</div>
+					</div>
+					<div class="pic">
+						<a href="https://you.ctrip.com/place/chongqing158.html" target="_blank">
+						<img src="img/重庆.jpg">
+						</a>
+						<div class="desc">重庆</div>
+					</div>
+				</div>
+				<p><h3>A man's feet should be planted in his country, but his eyes should survey the world.</h3></p>
+				<p><h3 style="text-align: right;">———— George Santayana</h3></p>
+			</div>
+			</a>
+			
+	<a name="part2">
+			<div class="card">
+				
+				<img src="img/比爱心的小猫.gif" style="float: right;position:absolute;;top:1430px;right: 500px;width: 170px;height: 170px;">
+				
+				<h2><p style="color: rgba(83,192,253,1.00);">电影手记</p></h2>
+				<h2><p>你喜欢看什么样的电影呢？科幻片？动作片？爱情片？文艺片？还是...</p></h2>
+				<h5><p>那你喜欢在什么时候看电影呢？是雨天的家里？还是晴天的电影院？还是......</p>
+					
+				</h5>
+				
+				<div class="fakeimg" style="height: 250px;">
+					<video controls style="height:200px; "><source src="img/电影混剪.mp4" ></video>
+					
+					
+					<a href="https://movie.douban.com/subject/25895901/" target="_blank">
+					<img src="img/海街日记.jpg" style="border-radius: 50%;position: absolute;width: 200px;height: 150px;left: 550px;top: 1650px;" title="电影《海街日记》"/>
+					</a>
+					<h5 style="position: absolute;right: 820px;top:1800px;">点击海报发现更多</h5>
+					<h5 style="position: absolute;right: 570px;top:1800px;">点击海报发现更多</h5>
+					
+					<a href="https://movie.douban.com/subject/26694988/" target="_blank">
+					<img src="img/比海更深.jpg" style="border-radius: 50%;position: absolute;width: 200px;height: 150px;left: 800px;top: 1650px;" title="电影《比海更深》"/>
+					</a>
+						
+				</div>
+			</div>
+		</div>
+	</a>
+	
+		<div class="rightcolumn">
+			
+			<a name="part3">
+			<div class="card">
+				<h2 style="text-align: center">喜欢的人</h2>
+				
+				<div class="fakeimg" style="height: 230px;">
+					<img src="img/10.jpg"  id="imgId" style="height: 180px;width: 100%">
+				</div>
+				
+				<h5 style="text-align: center">这是一个我喜欢了，很久很久很久的人</h5>
+			</div>
+			</a>
+				
+			<a name="part4">
+			<div class="card">
+				<h3 style="text-align: center">读书手记</h3>
+				
+				
+				<div class="fakeimg" style="height: 150px">
+					<div  class="chuntian" id="1" style="display:none;" ><img src="img/走向春天的下午.jpg"></div>
+					<p><img onMouseover="spring()" onMouseout="summer()" src="img/走向春天的下午.jpg" style="float: left;height: 90px;width:70px" title="本书描绘了一个小女孩带着对朋友的回忆去履行和朋友的约定的故事。作者用童真的笔调和对孩童心理的细腻把握，将一个孩子成长的心灵历程温暖呈现。"/ > 
+					&nbsp;&nbsp;&nbsp;《走向春天的下午》<br>
+					<h6 style="color:rgba(160,194,247,1.00);">&nbsp;&nbsp;&nbsp;&nbsp;将鼠标移到书页上，discover more</h6>
+					</p>
+				</div>
+				
+				
+				<div class="fakeimg" style="height: 150px">
+					<p><div  class="cai" id="c" style="display:none;" ><img src="img/猜猜我有多爱你.jpg"></div>
+						<img onMouseover="tom()" onMouseout="jimi()" src="img/猜猜我有多爱你.jpg" style="float: left;height: 90px;width:70px" title="大兔子把小兔子放到用叶子铺成的床上。他低下头来，亲了亲小兔子，对他说晚安。然后他躺在小兔子的身边，微笑着轻声地说：“我爱你一直到月亮那里，再回到你身边。” "/ >
+					&nbsp;&nbsp;&nbsp;《猜猜我有多爱你》<br>
+					<h6 style="color:rgba(160,194,247,1.00);">&nbsp;&nbsp;&nbsp;&nbsp;将鼠标移到书页上，discover more</h6>
+					</p>
+				</div>
+				
+				<div class="fakeimg" style="height: 308px">
+					<p><p><div  class="yue" id="y" style="display:none;" ><img src="img/月亮忘记了.jpg"></div>
+						<img onMouseover="cui()" onMouseout="xin()" src="img/月亮忘记了.jpg"  style="float: left;height: 90px;width:70px" title="《月亮忘记了》主要描绘了一个坠入人间的月亮与一位孤独寂寞的男孩相依为伴，月亮终究是要回到天上，孩子终究是要勇敢长大，但是他们的故事却一直散发着光亮。"/>
+					&nbsp;&nbsp;&nbsp;《月亮忘记了》<br>
+					<h6 style="color:rgba(160,194,247,1.00);">&nbsp;&nbsp;&nbsp;&nbsp;将鼠标移到书页上，discover more</h6>
+					</p><br><br>
+			
+			
+					<h3><p>三种绘本，三种人生，三种体验</p>
+						<p>有哪一本书也曾触动你吗？</p>
+						<p>请在猫小咖的留言区告诉我噢</p>
+					</h3>
+				</div>
+				</div>
+			</a>
+			</div>
+		</div>
+	
+	</div>
+	
+     <a name="part5">
+
+		 
+		 
+		 <div class="card">
+		
+		<h3 style="text-align: center;"><p>猫小咖的留言箱</p></h3>
+		<div class="fakeimg" style="height: 500px;margin: auto;background:rgba(219,250,242,1.00)">
+			<div class="biaodan">
+				性别：
+			     <input type="radio" name="gender" value="male">男
+			     <input type="radio" name="gender" value="female">女
+				<p>姓名:<input type="text"></p>
+				<p>电话:<input type="text"></p>
+				<p>QQ:   <input type="text"></p> 
+				<p>喜欢的电影类型：</p>
+				<input type="checkbox" name="answer" value="A">科幻片
+		        <input type="checkbox" name="answer" value="B">动作片
+		        <input type="checkbox" name="answer" value="C">爱情片
+				<input type="checkbox" name="answer" value="D">文艺片<br><br>
+				和小咖讲讲你的故事吧：<br>
+		       <textarea name="advice" style="width: 50%;height: 150px">小咖很期待你的故事噢~</textarea><br><br>
+				<button onClick="tijiao()" style="background: rgba(255,195,204,1.00);">提交</button>
+			</div>
+			
+			<img src="img/猫爪.png" style="float: right;position:absolute;;top:2278px;right: 1090px;width: 250px;height: 200px;">
+			<img src="img/猫爪.png" style="float: right;position:absolute;;top:2278px;right: 1250px;width: 250px;height: 200px;">
+			<img src="img/小猫玩手机.gif" style="float: right;position:absolute;;top:2100px;right: 400px;width: 200px;height: 200px;">
+			
+			
+		</div>
+	</div>
+	</a>
+	
+	<div class="footer">
+		<h4>欢迎大家来到猫小咖的个人网站，让我们一起分享自己的爱好吧~<br><br>
+			猫小咖的邮箱：328368104@qq.com
+		</h4>
+	</div>
+</body>
+          <script>
+			  
+          var div1=document.getElementById("1");
+	      function spring(){
+			div1.style.display="inline-block";
+	      }
+	      function summer(){
+		 div1.style.display="none";
+	      }
+			  
+			  
+		  var div2=document.getElementById("c");
+	      function tom(){
+			div2.style.display="inline-block";
+	      }
+	      function jimi(){
+		    div2.style.display="none";
+	      }  
+			 
+			  
+		  var div3=document.getElementById("y");
+	      function cui(){
+			div3.style.display="inline-block";
+	      }
+	      function xin(){
+		    div3.style.display="none";
+	      }  
+			 
+          </script>
+</html>
